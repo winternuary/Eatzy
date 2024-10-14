@@ -1,5 +1,13 @@
 import { style } from "@vanilla-extract/css";
 
 export const container = style({
-  backgroundColor: "lightblue",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginTop: "100%",
+});
+
+export const Logo = style({
+  fontFamily: "DOSIyagiMedium",
+  fontSize: "10rem",
 });
