@@ -2,7 +2,7 @@
 
 import * as styles from "./styles.css";
 import { useEffect, useState } from "react";
-import { Main } from "@/page/main/page";
+import { Main } from "@/pages/main/page";
 
 export const Landing = () => {
   const [isVisible, setIsVisible] = useState(true);

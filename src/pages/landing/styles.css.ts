@@ -9,5 +9,5 @@ export const container = style({
 
 export const Logo = style({
   fontFamily: "DOSIyagiMedium",
-  fontSize: "10rem",
+  fontSize: "4rem",
 });

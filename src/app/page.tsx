@@ -1,9 +1,10 @@
-import { Landing } from "@/page/landing/page";
+//import { Landing } from "@/pages/landing/page";
+import { Main } from "@/pages/main/page";
 
 export default function Home() {
   return (
     <>
-      <Landing />
+      <Main />
     </>
   );
 }
