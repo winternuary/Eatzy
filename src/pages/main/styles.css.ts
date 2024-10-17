@@ -29,7 +29,7 @@ export const inputContainerStyle = style({
   position: "relative",
   display: "flex",
   alignItems: "center",
-  width: "20rem",
+  width: "22rem",
   height: "2.5rem",
   margin: "16px 0 0 20px",
 });

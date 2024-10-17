@@ -47,7 +47,7 @@ const RecipeDetail = () => {
           className={styles.image}
           src={recipe.imageUrl}
           alt=""
-          width={300}
+          width={340}
           height={300}
         />
         <div className={styles.nameBox}>

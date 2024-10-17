@@ -52,8 +52,8 @@ export const Main = () => {
                   className={styles.image}
                   src={recipe.imageUrl}
                   alt=""
-                  width={120}
-                  height={120}
+                  width={150}
+                  height={150}
                 />
                 <h3 className={styles.recipeName}>{recipe.name}</h3>
               </div>
@@ -72,8 +72,8 @@ export const Main = () => {
                   className={styles.image}
                   src={recipe.imageUrl}
                   alt=""
-                  width={120}
-                  height={120}
+                  width={150}
+                  height={150}
                 />
                 <h3 className={styles.recipeName}>{recipe.name}</h3>
               </div>
