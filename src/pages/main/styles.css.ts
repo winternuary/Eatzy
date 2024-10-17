@@ -9,8 +9,11 @@ export const recipeListStyle = style({
 });
 
 export const recipeItemStyle = style({
-  border: "1px solid #ccc",
-  padding: "20px",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "10px",
   cursor: "pointer",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
 });
@@ -32,10 +35,11 @@ export const inputContainerStyle = style({
 });
 
 export const inputStyle = style({
+  fontFamily: "DOSIyagiMedium",
   width: "100%",
   height: "100%",
   padding: "10px 40px 10px 15px",
-  fontSize: "20px",
+  fontSize: "16px",
   borderRadius: "8px",
   backgroundColor: "#fff",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -64,7 +68,7 @@ export const popularName = style({
 
 export const category = style({
   fontFamily: "DOSIyagiMedium",
-  fontSize: "14px",
+  fontSize: "16px",
   margin: "10px 0 0 20px",
   fontWeight: "600",
 });
@@ -72,4 +76,12 @@ export const category = style({
 export const image = style({
   borderRadius: "5px",
   marginBottom: "10px",
+});
+
+export const recipeName = style({
+  fontFamily: "DOSIyagiMedium",
+  display: "flex",
+  justifyContent: "start",
+  fontSize: "18px",
+  fontWeight: "500",
 });

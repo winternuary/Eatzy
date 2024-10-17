@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { recipes, Recipe } from "@/data/data";
 import { MZdata } from "@/data/MZdata";
 import Image from "next/image";
@@ -9,7 +9,16 @@ const RecipeDetail = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const [isFavorited, setIsFavorited] = useState(false); // 즐겨찾기 상태 관리
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  useEffect(() => {
+    if (id) {
+      const favoriteStatus = localStorage.getItem(`favorite_${id}`);
+      if (favoriteStatus === "true") {
+        setIsFavorited(true);
+      }
+    }
+  }, [id]);
 
   const recipe =
     recipes.find((r: Recipe) => r.id === Number(id)) ||
@@ -20,7 +29,9 @@ const RecipeDetail = () => {
   }
 
   const toggleFavorite = () => {
-    setIsFavorited(!isFavorited);
+    const newStatus = !isFavorited;
+    setIsFavorited(newStatus);
+    localStorage.setItem(`favorite_${id}`, newStatus.toString());
   };
 
   return (

@@ -6,13 +6,21 @@ import { useState, ChangeEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import * as styles from "./styles.css";
-import search from "@/assets/search.png";
+import search from "../../../public/assets/search.png";
+import { useRouter } from "next/navigation";
 
 export const Main = () => {
   const [inputValue, setInputValue] = useState("");
+  const router = useRouter();
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
+  };
+
+  const handleSearch = () => {
+    if (inputValue) {
+      router.push(`/search?query=${inputValue}`);
+    }
   };
 
   return (
@@ -24,11 +32,13 @@ export const Main = () => {
           type="text"
           value={inputValue}
           onChange={handleInputChange}
+          onKeyPress={(e) => e.key === "Enter" && handleSearch()}
         />
         <Image
           src={search}
           alt="search icon"
           className={styles.searchIconStyle}
+          onClick={handleSearch}
         />
       </div>
       <div className={styles.popularBox}>
@@ -45,7 +55,7 @@ export const Main = () => {
                   width={120}
                   height={120}
                 />
-                <h3>{recipe.name}</h3>
+                <h3 className={styles.recipeName}>{recipe.name}</h3>
               </div>
             </Link>
           ))}
@@ -58,7 +68,14 @@ export const Main = () => {
           {recipes.map((recipe: Recipe) => (
             <Link href={`/detail/${recipe.id}`} key={recipe.id}>
               <div className={styles.recipeItemStyle}>
-                <h3>{recipe.name}</h3>
+                <Image
+                  className={styles.image}
+                  src={recipe.imageUrl}
+                  alt=""
+                  width={120}
+                  height={120}
+                />
+                <h3 className={styles.recipeName}>{recipe.name}</h3>
               </div>
             </Link>
           ))}
