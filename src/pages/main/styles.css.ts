@@ -11,8 +11,8 @@ export const recipeListStyle = style({
 export const recipeItemStyle = style({
   border: "1px solid #ccc",
   padding: "20px",
-  textAlign: "center",
   cursor: "pointer",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
 });
 
 export const Logo = style({
@@ -50,9 +50,12 @@ export const searchIconStyle = style({
   height: "20px",
 });
 
-export const popularBox = style({});
+export const popularBox = style({
+  marginTop: "10px",
+});
 
 export const popularName = style({
+  display: "flex",
   fontFamily: "DOSIyagiMedium",
   fontSize: "20px",
   margin: "16px 0 0 20px",
@@ -64,4 +67,9 @@ export const category = style({
   fontSize: "14px",
   margin: "10px 0 0 20px",
   fontWeight: "600",
+});
+
+export const image = style({
+  borderRadius: "5px",
+  marginBottom: "10px",
 });
