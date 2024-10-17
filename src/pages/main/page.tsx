@@ -1,7 +1,7 @@
 "use client";
 
-import { recipes, Recipe } from "@/data/data";
-import { MZdata } from "@/data/MZdata";
+import { recipes, Recipe } from "../../../public/data/data";
+import { MZdata } from "../../../public/data/MZdata";
 import { useState, ChangeEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";

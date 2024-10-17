@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import { recipes, Recipe } from "@/data/data";
-import { MZdata } from "@/data/MZdata";
+import { recipes, Recipe } from "../../../public/data/data";
+import { MZdata } from "../../../public/data/MZdata";
 import Image from "next/image";
 import * as styles from "./styles.css";
 

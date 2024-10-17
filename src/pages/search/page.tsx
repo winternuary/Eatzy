@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { recipes, Recipe } from "@/data/data";
-import { MZdata } from "@/data/MZdata";
+import { recipes, Recipe } from "../../../public/data/data";
+import { MZdata } from "../../../public/data/MZdata";
 import Link from "next/link";
 import Image from "next/image";
 import * as styles from "./style.css";
