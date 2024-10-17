@@ -8,7 +8,6 @@ import * as styles from "./styles.css";
 const RecipeDetail = () => {
   const router = useRouter();
   const { id } = router.query;
-
   const [isFavorited, setIsFavorited] = useState(false);
 
   useEffect(() => {
